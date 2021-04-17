@@ -9,6 +9,41 @@ public class Juego {
 	String  namedate;
 	Integer puntos;
 	String  mimiedo;
+	
+	
+	
+	public void menu() {
+		int opcion;
+		
+		
+			
+		do {
+			System.out.println("");
+			System.out.println("=========================================");
+			System.out.println("");
+			System.out.println(">>>>>>>>CitaFebrero - Menu<<<<<<<<<");
+			System.out.println("");
+			System.out.println("=========================================");
+			System.out.println("Para Jugar ingrese numero 1");
+			System.out.println("Para Salir ingrese numero 3");
+			opcion=gscan.nextInt();
+			gscan.nextLine();
+			
+			switch(opcion) {
+			case 1:
+				System.out.println("--------------------------------");
+				creacion();
+				break;
+			case 3:
+				System.out.println("Adios");
+				break;
+			default:
+				System.out.println("Opcion erronea");
+				break;
+			}
+			//gscan.nextLine();	
+		}while(opcion!=3);
+	}
 
 
 	
@@ -74,7 +109,7 @@ public class Juego {
 			System.out.println("Ingrese cualquier numero para volver a jugar");
 			System.out.println("");
 			gscan.nextLine();
-			creacion();
+			menu();
 		}
 		else {
 			primerCaso();
@@ -124,7 +159,7 @@ public class Juego {
 			System.out.println("Ingrese cualquier numero para volver a jugar");
 			System.out.println("");
 			gscan.nextLine();
-			creacion();
+			menu();
 		}
 		else {
 			segundoCaso();
@@ -136,7 +171,7 @@ public class Juego {
 		System.out.println("         ");
 		System.out.println("---------------Situacion 3---------------");
 		System.out.println("         ");
-		System.out.println("Tu cita no sabe que pedir de tomar y comer\nQue haces?");
+		System.out.println(namedate+" no sabe que pedir de tomar y comer\nQue haces?");
 		System.out.println("         ");
 		System.out.println("------------Selecciona Opcion------------");
 		System.out.println("1- Le recomiendo algo que no se que es pero tiene buena pinta\n2- Le recomiendo algo que "
@@ -506,12 +541,13 @@ public class Juego {
 		System.out.println("...");
 		System.out.println("...");
 		System.out.println("Te levantas en tu cama. ¿Esto fue un sueño?...");
-		System.out.println("");
+		System.out.println("...Encuentras sangre en tu ropa...");
 		System.out.println("Ingrese cualquier numero para volver a jugar");
 		System.out.println("");
 		gscan.nextLine();
+		gscan.nextLine();
 		
-		creacion();
+		menu();
 	}
 	
 	public void finalMalo() {
@@ -525,8 +561,9 @@ public class Juego {
 		System.out.println("Ingrese cualquier numero para volver a jugar");
 		System.out.println("");
 		gscan.nextLine();
+		gscan.nextLine();
 		
-		creacion();
+		menu();
 	}
 	
 	
@@ -594,10 +631,10 @@ public class Juego {
 		System.out.println("");
 		gscan.nextLine();
 		
-		creacion();
+		menu();
 	}
 	
-	
+
 	
 
 }

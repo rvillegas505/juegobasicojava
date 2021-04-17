@@ -1,0 +1,1 @@
+Juego simple del genero Novela Visual en texto, realizado en Java.
